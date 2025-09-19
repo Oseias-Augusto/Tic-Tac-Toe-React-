@@ -57,7 +57,7 @@
   max-width: 320px;
 }
 
-.reset, .reset1 {
+.reset, .reset1, .reset2 {
   composes: mt-3 from global;
   background-color: #274C77;
   color: white;
@@ -73,9 +73,12 @@
   visibility: hidden
 }
 
+.reset2::after{
+  content: " - Mais informações"
+}
 
 
-.reset:hover, .but:hover, .reset1:hover {
+.reset:hover, .but:hover, .reset1:hover, reset2:hover {
   background-color: #E7ECEF;
   color: #212529;
   box-shadow: inset 0 0 20px #6096BA;
@@ -117,4 +120,5 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
