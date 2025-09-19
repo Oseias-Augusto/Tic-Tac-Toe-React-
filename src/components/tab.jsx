@@ -3,7 +3,7 @@ import Bot from './botao';
 import Styles from '../stylesComp/styles.module.css';
 import { vitoria, empate } from '../assets/func.js';
 import Placar from "./placar.jsx";
-import Menu from "./menu.jsx";
+import Menu from "./Menu.jsx";
 
 export default function Tabuleiro() {
   const [modo, setModo] = useState(null);
@@ -124,3 +124,4 @@ export default function Tabuleiro() {
     </div>
   );
 }
+
