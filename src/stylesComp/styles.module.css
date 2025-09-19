@@ -73,8 +73,18 @@
   visibility: hidden
 }
 
-.reset2:hover, .reset2::after{
-  content: " - Mais informações"
+.reset2::after {
+  content: "";
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  margin-left: 5px;
+  color: #fff;
+}
+
+.reset2:hover::after {
+  content: " - Mais informações";
+  opacity: 1;
 }
 
 
@@ -120,6 +130,7 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
 
 
