@@ -76,7 +76,7 @@ export default function Tabuleiro() {
   }
 
   if (!modo) {
-    return <Menu setModo={setModo} menu={Styles.menu} titulo={Styles.titulo} reset={Styles.reset} />;
+    return <Menu setModo={setModo} menu={Styles.menu} titulo={Styles.titulo} reset2={Styles.reset2} />;
   }
 
   return (
@@ -124,4 +124,5 @@ export default function Tabuleiro() {
     </div>
   );
 }
+
 
