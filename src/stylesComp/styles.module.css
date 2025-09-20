@@ -51,12 +51,6 @@
   transform: scale(1.04);
 }
 
-.mensagem {
-  composes: alert alert-info text-center mt-3 from global;
-  width: 100%;
-  max-width: 320px;
-}
-
 .reset, .reset1, .resetNo, .resetLi {
   composes: mt-3 from global;
   background-color: #274C77;
@@ -169,6 +163,7 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
 
 
