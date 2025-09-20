@@ -105,7 +105,7 @@
   background-color: #555D50;
   opacity: 1;
   width: 200px;
-  height: 200px;
+  height: auto;
   text-align: center;
 /*   pointer-events: none; */
 }
@@ -114,8 +114,8 @@
   content: "Apenas 3 peças por jogador";
   background-color: #555D50;
   opacity: 1;
-  width: 500px;
-  height: 500px;
+  width: 200px;
+  height: auto;
   text-align: center;
 /*   pointer-events: none; */
 }
@@ -163,6 +163,7 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
 
 
