@@ -76,8 +76,8 @@
 .resetNo::after, .resetli::after {
   content: "";
   position: absolute;
-  bottom: 50vh;
-  left: 50vw;
+  bottom: 10vh;
+  left: 10vw;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   margin-left: 5px;
@@ -90,7 +90,7 @@
   opacity: 1;
   width: 800px;
   height: 800px;
-  pointer-events: none;
+/*   pointer-events: none; */
 }
 
 .resetli:hover::after{
@@ -98,7 +98,7 @@
   opacity: 1;
   width: 800px;
   height: 800px;
-  pointer-events: none;
+/*   pointer-events: none; */
 }
 
 
@@ -144,6 +144,7 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
 
 
