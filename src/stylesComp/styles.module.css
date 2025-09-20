@@ -75,7 +75,9 @@
 
 .reset2::after {
   content: "";
-  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   margin-left: 5px;
@@ -130,6 +132,7 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
 
 
