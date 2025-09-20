@@ -103,7 +103,10 @@
 .resetNo:hover::after {
   content: "Jogo da velha normal";
   background-color: #555D50;
+  padding: 5px;
+  border-radius: 0.5rem;
   opacity: 1;
+  left: 5px;
   width: 200px;
   height: auto;
   text-align: center;
@@ -113,8 +116,11 @@
 .resetLi:hover::after{
   content: "Apenas 3 peças por jogador";
   background-color: #555D50;
+  padding: 5px;
+  border-radius: 0.5rem;
   opacity: 1;
-  width: 200px;
+  left: 5px;
+  width: 300px;
   height: auto;
   text-align: center;
 /*   pointer-events: none; */
@@ -163,6 +169,7 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
 
 
