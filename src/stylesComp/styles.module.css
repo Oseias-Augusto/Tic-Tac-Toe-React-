@@ -102,7 +102,7 @@
 
 .resetNo:hover::after {
   content: "Jogo da velha normal";
-  background-color: #6096BA;
+  background-color: #467ca0;
   padding: 5px;
   border-radius: 0.5rem;
   opacity: 1;
@@ -115,7 +115,7 @@
 
 .resetLi:hover::after{
   content: "Apenas 3 peças por jogador";
-  background-color: #6096BA;
+  background-color: #467ca0;
   padding: 5px;
   border-radius: 0.5rem;
   opacity: 1;
@@ -169,6 +169,7 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
 
 
