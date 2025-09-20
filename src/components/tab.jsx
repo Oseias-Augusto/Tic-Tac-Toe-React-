@@ -84,7 +84,7 @@ export default function Tabuleiro() {
       <div className={Styles.tabuleiro}>
 {/*         <h1>Jogador {jogadorX? "X": "O"}</h1> */}
         
-        <h1>{mensagem? {mensagem}: Jogador {jogadorX? "X": "O"}}}</h1>
+        <h1>{mensagem ? mensagem : `Jogador ${jogadorX ? "X" : "O"}`}</h1>
         <div className={Styles.grid}>
           {jogadas.map((jogada, idx) => (
               <Bot
@@ -127,6 +127,7 @@ export default function Tabuleiro() {
     </div>
   );
 }
+
 
 
 
