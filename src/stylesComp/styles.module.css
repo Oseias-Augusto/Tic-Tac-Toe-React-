@@ -57,7 +57,7 @@
   max-width: 320px;
 }
 
-.reset, .reset1, .reset2 {
+.reset, .reset1, .resetNo, .resetLi {
   composes: mt-3 from global;
   background-color: #274C77;
   color: white;
@@ -73,20 +73,32 @@
   visibility: hidden
 }
 
-.reset2::after {
+.resetNo::after, .resetli::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 50vh;
+  left: 50vw;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   margin-left: 5px;
   color: #fff;
+  
 }
 
-.reset2:hover::after {
-  content: " - Mais informações";
+.resetNo:hover::after {
+  content: "Jogo da velha normal";
   opacity: 1;
+  width: 800px;
+  height: 800px;
+  pointer-events: none;
+}
+
+.resetli:hover::after{
+  content: "Apenas 3 peças por jogador";
+  opacity: 1;
+  width: 800px;
+  height: 800px;
+  pointer-events: none;
 }
 
 
@@ -132,6 +144,7 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
 
 
