@@ -84,7 +84,7 @@
   left: 5vw; */
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  margin-left: 5px;
+  margin-left: 1px;
   color: #fff;
   
 }
@@ -96,12 +96,13 @@
   left: 5vw; */
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  margin-left: 5px;
+  margin-left: 1px;
   color: #fff;
 }
 
 .resetNo:hover::after {
   content: "Jogo da velha normal";
+  background-color: #555D50;
   opacity: 1;
   width: 800px;
   height: 800px;
@@ -110,6 +111,7 @@
 
 .resetLi:hover::after{
   content: "Apenas 3 peças por jogador";
+  background-color: #555D50;
   opacity: 1;
   width: 800px;
   height: 800px;
@@ -159,6 +161,7 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
 
 
