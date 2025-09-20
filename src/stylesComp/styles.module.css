@@ -73,16 +73,27 @@
   visibility: hidden
 }
 
-.resetNo::after, .resetli::after {
+.resetNo::after{
   content: "";
   position: absolute;
-  bottom: 10vh;
-  left: 10vw;
+  bottom: 5vh;
+  left: 5vw;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   margin-left: 5px;
   color: #fff;
   
+}
+
+.resetli::after{
+  content: "";
+  position: absolute;
+  bottom: 5vh;
+  left: 5vw;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  margin-left: 5px;
+  color: #fff;
 }
 
 .resetNo:hover::after {
@@ -144,6 +155,7 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
 
 
