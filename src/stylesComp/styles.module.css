@@ -73,11 +73,15 @@
   visibility: hidden
 }
 
+.resetNo, .resetLi{
+   position: relative;
+}
+  
 .resetNo::after{
   content: "";
   position: absolute;
-  bottom: 5vh;
-  left: 5vw;
+/*   bottom: 5vh;
+  left: 5vw; */
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   margin-left: 5px;
@@ -88,8 +92,8 @@
 .resetLi::after{
   content: "";
   position: absolute;
-  bottom: 5vh;
-  left: 5vw;
+/*   bottom: 5vh;
+  left: 5vw; */
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   margin-left: 5px;
@@ -155,6 +159,7 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
 
 
