@@ -82,7 +82,8 @@ export default function Tabuleiro() {
   return (
     <div className={Styles.cont}>
       <div className={Styles.tabuleiro}>
-        <h1>Jogador {jogadorX? "X": "O"}</h1>
+{/*         <h1>Jogador {jogadorX? "X": "O"}</h1> */}
+        <h1>{mensagem? mensagem: Jogador {jogadorX? "X": "O"}}}</h1>
         <div className={Styles.grid}>
           {jogadas.map((jogada, idx) => (
               <Bot
@@ -93,11 +94,11 @@ export default function Tabuleiro() {
             />
           ))}
         </div>
-        {mensagem && (
+{/*         {mensagem && (
           <div className={Styles.mensagem}>
             {mensagem}
           </div>
-        )}
+        )} */}
 
         <button className={Styles.reset} onClick={reiniciar}>
           Reiniciar
@@ -124,6 +125,7 @@ export default function Tabuleiro() {
     </div>
   );
 }
+
 
 
 
