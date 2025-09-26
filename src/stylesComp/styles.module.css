@@ -120,7 +120,7 @@
 .botaoO:disabled, .botaoX:disabled{
   font-weight: 700;
   border-radius: 0.4rem;
-  background-color: #6096ba3b;
+  background-color: transparent;
   border: 1px solid #212529;
   width: 100px;
   height: 100px;
