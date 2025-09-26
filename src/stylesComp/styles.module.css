@@ -8,6 +8,10 @@
 
 .tabuleiro{
   composes: container d-flex flex-column align-items-center justify-content-center min-vh-100 min-vw-100 from global;
+  grid-area: tabuleiro;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .menu{
@@ -24,14 +28,34 @@
   gap: 1rem;
 }
 
-.placar, .modo {
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 20px;
-  border-radius: 0.5rem;
-  width: 180px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+.layout {
+  display: grid;
+  grid-template-areas:
+    "placar tabuleiro"
+    "modo   tabuleiro";
+  grid-template-columns: 200px 1fr; /* coluna esquerda fixa, direita flexível */
+  grid-template-rows: auto auto;   /* duas linhas */
+  gap: 1rem;
+  min-height: 100vh;
+  align-items: start;
+  justify-content: center;
 }
+
+/* cada área recebe seu nome */
+.placar {
+  grid-area: placar;
+  background: rgba(255,255,255,0.15);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.modo {
+  grid-area: modo;
+  background: rgba(255,255,255,0.15);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
 
 .titulo{
   font-family: "Limelight", sans-serif;
