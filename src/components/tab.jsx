@@ -44,7 +44,7 @@ export default function Tabuleiro() {
 
     if (vitoria(novaJogada, simbolo)) {
       setJogadas(novaJogada);
-      setMensagem(`Jogador ${jogadorX ? 'X' : 'O'} venceu!`);
+      setMensagem(`${jogadorX ? 'X' : 'O'} venceu!`);
       if (simbolo == "x"){
         setPlacarX(placarX + 1)
       }else{
