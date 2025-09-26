@@ -1,4 +1,4 @@
-export default function Placar({xis, bol, estilo, zerar, reset}){
+export default function Placar({xis, bol, estilo, zerar, reset, mensagem}){
 
     return(
         <>
