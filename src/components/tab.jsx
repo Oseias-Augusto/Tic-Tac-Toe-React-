@@ -88,6 +88,7 @@ export default function Tabuleiro() {
         modo={modo} 
         reset1={Styles.reset1}
         mensagem={mensagem}
+        troca = {()=> setModo(modo == "limitado"? "normal": "limitado")}
       />
 
       <div className={Styles.tabuleiro}>
@@ -121,8 +122,6 @@ export default function Tabuleiro() {
         estilo={Styles.placar} 
         zerar={()=> zerar()} 
         reset={Styles.reset}
-        troca = {()=> setModo(modo == "limitado"? "normal": "limitado")}
-        mensagem={mensagem}
         tb = {jogadorX}
         ></Placar>
 
