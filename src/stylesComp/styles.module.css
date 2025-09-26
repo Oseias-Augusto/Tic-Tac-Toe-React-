@@ -4,10 +4,12 @@
   font-family: "Limelight", sans-serif;
   font-weight: 400;
   font-style: normal;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 .tabuleiro{
-  composes: container d-flex flex-column align-items-center justify-content-center min-vh-100 min-vw-100 from global;
+  composes: container d-flex flex-column align-items-center justify-content-center from global;
   grid-area: tabuleiro;
   display: flex;
   flex-direction: column;
