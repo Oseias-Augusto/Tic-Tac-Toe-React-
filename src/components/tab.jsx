@@ -83,47 +83,50 @@ export default function Tabuleiro() {
   return (
     <div className={Styles.cont}>
 
-      <Trocar
-        estiloM={Styles.modo} 
-        modo={modo} 
-        reset1={Styles.reset1}
-        mensagem={mensagem}
-        troca = {()=> setModo(modo == "limitado"? "normal": "limitado")}
-      />
+      <div className={Styles.layout}>
+        <Trocar
+          estiloM={Styles.modo} 
+          modo={modo} 
+          reset1={Styles.reset1}
+          mensagem={mensagem}
+          troca = {()=> setModo(modo == "limitado"? "normal": "limitado")}
+        />
 
-      <div className={Styles.tabuleiro}>
-        <h1>{mensagem ? mensagem : `Jogador ${jogadorX ? "X" : "O"}`}</h1>
-        <div className={Styles.grid}>
-          {jogadas.map((jogada, idx) => (
-              <Bot
-              key={idx}
-              value={jogada}
-              onClick={() => coloca(idx)}
-              estilo={Styles.botao}
-            />
-          ))}
+        <div className={Styles.tabuleiro}>
+          <h1>{mensagem ? mensagem : `Jogador ${jogadorX ? "X" : "O"}`}</h1>
+          <div className={Styles.grid}>
+            {jogadas.map((jogada, idx) => (
+                <Bot
+                key={idx}
+                value={jogada}
+                onClick={() => coloca(idx)}
+                estilo={Styles.botao}
+              />
+            ))}
+          </div>
+
+
+          <div className={Styles.butts}>
+            <button className={Styles.reset} onClick={reiniciar}>
+              Reiniciar
+            </button >
+
+            <button className={Styles.but} onClick={() => {setModo(null); reiniciar()}}>
+              Voltar ao menu
+            </button>
+          </div>
         </div>
-
-
-        <div className={Styles.butts}>
-          <button className={Styles.reset} onClick={reiniciar}>
-            Reiniciar
-          </button >
-
-          <button className={Styles.but} onClick={() => {setModo(null); reiniciar()}}>
-            Voltar ao menu
-          </button>
-        </div>
-      </div>
-      
-      <Placar 
-        xis={placarX} 
-        bol={placarO} 
-        estilo={Styles.placar} 
-        zerar={()=> zerar()} 
-        reset={Styles.reset}
-        tb = {jogadorX}
+        
+        <Placar 
+          xis={placarX} 
+          bol={placarO} 
+          estilo={Styles.placar} 
+          zerar={()=> zerar()} 
+          reset={Styles.reset}
+          tb = {jogadorX}
         ></Placar>
+
+      </div>
 
       
     </div>

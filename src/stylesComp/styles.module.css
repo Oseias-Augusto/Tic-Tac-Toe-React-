@@ -1,14 +1,28 @@
 .cont {
-  display: flex;
+  position: absolute;
   background: linear-gradient(145deg, #274C77,#6096BA, #A3CEF1);
   font-family: "Limelight", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.tabuleiro{
-  composes: container d-flex flex-column align-items-center justify-content-center min-vh-100 min-vw-100 from global;
+.layout{
+  display: grid;
+  grid-template-areas: 
+    "trocar tabuleiro placar";
+  grid-template-columns: 200px 1fr 200px;
+  gap: 2rem;
+  align-items: start;
+  justify-content: center;
+  min-height: 100vh;
 }
+
+.tabuleiro{
+  composes: container d-flex flex-column align-items-center justify-content-center min-vw-100 from global;
+  grid-area: tabuleiro;
+}
+
+
 
 .menu{
   composes: container d-flex flex-column align-items-center justify-content-center min-vh-100 min-vw-100 from global;
@@ -149,6 +163,7 @@
   /* position: relative;
   bottom: 70vh;
   left: 30vw; */
+  grid-area: placar;
   background-color: rgba(255, 255, 255, 0.15);
   padding: 20px;
   border-radius: 0.5rem;
@@ -161,6 +176,7 @@
   /* position: relative;
   bottom: 95vh;
   left: 60vw; */
+  grid-area: trocar;
   background-color: rgba(255, 255, 255, 0.15);
   padding: 20px;
   border-radius: 0.5rem;
@@ -168,6 +184,7 @@
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
 
 
 
