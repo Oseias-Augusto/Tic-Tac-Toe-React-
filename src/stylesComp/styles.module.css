@@ -117,6 +117,16 @@
   transform: scale(1.04);
 }
 
+.botaoO:disabled, .botaoX:disabled{
+  font-weight: 700;
+  border-radius: 0.4rem;
+  background-color: #6096ba3b;
+  border: 1px solid #212529;
+  width: 100px;
+  height: 100px;
+  font-size: 1.75rem;
+}
+
 .butts{
   display: flex;
   gap: 1rem;

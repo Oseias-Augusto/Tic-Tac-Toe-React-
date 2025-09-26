@@ -3,7 +3,7 @@
 function botao({value, onClick, estilo}){
     return(
         <>
-            <button onClick={onClick} className={estilo} >{value}</button>
+            <button onClick={onClick} className={estilo} disabled={value}>{value}</button>
         </>
     )
 }
