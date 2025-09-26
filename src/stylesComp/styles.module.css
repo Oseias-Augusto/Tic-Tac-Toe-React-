@@ -12,13 +12,13 @@
     "trocar tabuleiro placar";
   grid-template-columns: 200px 1fr 200px;
   gap: 2rem;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
 
 .tabuleiro{
-  composes: container d-flex flex-column align-items-center justify-content-center min-vw-100 from global;
+  composes: container d-flex flex-column align-items-center justify-content-center from global;
   grid-area: tabuleiro;
 }
 
