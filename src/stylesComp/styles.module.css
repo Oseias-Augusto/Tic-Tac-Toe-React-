@@ -19,7 +19,12 @@
 }
 
 .tabuleiro{
-  composes: container d-flex flex-column align-items-center justify-content-center from global;
+  /* composes: container d-flex flex-column align-items-center justify-content-center from global; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
   grid-area: tabuleiro;
 }
 
