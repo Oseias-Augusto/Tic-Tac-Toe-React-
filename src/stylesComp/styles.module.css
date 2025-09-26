@@ -53,7 +53,7 @@
   gap: 5px;
 }
 
-.botao {
+.botaoX {
   font-weight: 700;
   border-radius: 0.375rem;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, transform .25s ease-out, border-radius .25s ease-in;
@@ -64,7 +64,45 @@
   font-size: 1.75rem;
 }
 
-.botao:hover {
+.botaoX::after{
+  content: "";
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.botaoX:hover::after {
+  content: "X";
+  opacity: 1;
+  color: #fff;
+  background-color: #274C77;
+  box-shadow: inset 0 0 20px #6096BA;
+  border-radius: 0.750rem;
+  border-color: #6096BA;
+  transform: scale(1.04);
+}
+
+.botaoO{
+  font-weight: 700;
+  border-radius: 0.375rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, transform .25s ease-out, border-radius .25s ease-in;
+  background-color: transparent;
+  border: 1px solid #212529;
+  width: 100px;
+  height: 100px;
+  font-size: 1.75rem;
+}
+
+.botaoO::after{
+  content: "";
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.botaoO:hover::after{
+  content: "O";
+  opacity: 1;
   color: #fff;
   background-color: #274C77;
   box-shadow: inset 0 0 20px #6096BA;
@@ -107,7 +145,6 @@
   transition: opacity 0.3s ease-in-out;
   margin-left: 1px;
   color: #fff;
-  
 }
 
 .resetLi::after{

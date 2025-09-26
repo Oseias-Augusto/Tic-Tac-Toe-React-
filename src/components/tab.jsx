@@ -102,7 +102,7 @@ export default function Tabuleiro() {
                 key={idx}
                 value={jogada}
                 onClick={() => coloca(idx)}
-                estilo={Styles.botao}
+                estilo={jogadorX? Styles.botaoX: Styles.botaoO}
               />
             ))}
           </div>
