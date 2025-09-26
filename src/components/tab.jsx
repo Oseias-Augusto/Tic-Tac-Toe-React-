@@ -95,13 +95,15 @@ export default function Tabuleiro() {
         </div>
 
 
-        <button className={Styles.reset} onClick={reiniciar}>
-          Reiniciar
-        </button >
+        <div className={Styles.butts}>
+          <button className={Styles.reset} onClick={reiniciar}>
+            Reiniciar
+          </button >
 
-        <button className={Styles.but} onClick={() => {setModo(null); reiniciar()}}>
-          Voltar ao menu
-        </button>
+          <button className={Styles.but} onClick={() => {setModo(null); reiniciar()}}>
+            Voltar ao menu
+          </button>
+        </div>
       </div>
       
       <Placar 

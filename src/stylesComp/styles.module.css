@@ -51,6 +51,10 @@
   transform: scale(1.04);
 }
 
+.butts{
+  display: flex;
+}
+
 .reset, .reset1, .resetNo, .resetLi {
   composes: mt-3 from global;
   background-color: #274C77;
