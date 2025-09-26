@@ -25,7 +25,7 @@
   align-items: center;
   justify-content: center;
   grid-area: tabuleiro;
-  background: linear-gradient(145deg, #6096BA, #274C77);
+  background: linear-gradient(145deg, #6096BA, #A3CEF1);
   border-radius: 1rem;
   padding: 2rem;
 }
