@@ -4,60 +4,19 @@
   font-family: "Limelight", sans-serif;
   font-weight: 400;
   font-style: normal;
-  min-width: 100vw;
-  min-height: 100vh;
 }
 
 .tabuleiro{
-  composes: container d-flex flex-column align-items-center justify-content-center from global;
-  grid-area: tabuleiro;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  composes: container d-flex flex-column align-items-center justify-content-center min-vh-100 min-vw-100 from global;
 }
 
 .menu{
-  composes: container d-flex flex-column align-items-center justify-content-center min-vh-10 min-vw-10 from global;
+  composes: container d-flex flex-column align-items-center justify-content-center min-vh-100 min-vw-100 from global;
   background: linear-gradient(145deg, #274C77,#6096BA, #A3CEF1);
   font-family: "Limelight", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
-.menus {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.layout {
-  display: grid;
-  grid-template-areas:
-    "placar tabuleiro"
-    "modo   tabuleiro";
-  grid-template-columns: 200px 1fr; /* coluna esquerda fixa, direita flexível */
-  grid-template-rows: auto auto;   /* duas linhas */
-  gap: 1rem;
-  min-height: 100vh;
-  align-items: start;
-  justify-content: center;
-}
-
-/* cada área recebe seu nome */
-.placar {
-  grid-area: placar;
-  background: rgba(255,255,255,0.15);
-  padding: 1rem;
-  border-radius: 0.5rem;
-}
-
-.modo {
-  grid-area: modo;
-  background: rgba(255,255,255,0.15);
-  padding: 1rem;
-  border-radius: 0.5rem;
-}
-
 
 .titulo{
   font-family: "Limelight", sans-serif;
@@ -186,7 +145,7 @@
 }
 
 
-/* .placar{
+.placar{
   position: relative;
   bottom: 70vh;
   left: 30vw;
@@ -208,7 +167,7 @@
   width: 180px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-} */
+}
 
 
 

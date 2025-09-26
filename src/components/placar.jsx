@@ -1,4 +1,4 @@
-export default function Placar({xis, bol, estilo, modo, estiloM, zerar, reset, troca, mensagem, reset1}){
+export default function Placar({xis, bol, estilo, zerar, reset}){
 
     return(
         <>
@@ -8,18 +8,11 @@ export default function Placar({xis, bol, estilo, modo, estiloM, zerar, reset, t
                 </h1>
                 <p> Jogador X: {xis} </p>
                 <p> Jogador O: {bol}</p>
-                <button onClick={zerar} className={reset}>
+                <button onClick={zerar} className={reset} disabled={!mensagem}>
                     Zerar Placar
                 </button>
             </div>
 
-            <div className={estiloM}>
-                <h2>Modo</h2>
-                <p>{modo}</p>
-                <button className={reset1} onClick={troca} disabled={!mensagem}>
-                    Trocar
-                </button>
-            </div>
         </>
         
     )

@@ -3,6 +3,7 @@ import Bot from './botao';
 import Styles from '../stylesComp/styles.module.css';
 import { vitoria, empate } from '../assets/func.js';
 import Placar from "./placar.jsx";
+import Trocar from "./Trocar.jsx";
 import Menu from "./Menu.jsx";
 
 export default function Tabuleiro() {
@@ -81,47 +82,51 @@ export default function Tabuleiro() {
 
   return (
     <div className={Styles.cont}>
-      <div className={Styles.layout}>
-        <div className={Styles.tabuleiro}>
-          <h1>{mensagem ? mensagem : `Jogador ${jogadorX ? "X" : "O"}`}</h1>
-          <div className={Styles.grid}>
-            {jogadas.map((jogada, idx) => (
-                <Bot
-                key={idx}
-                value={jogada}
-                onClick={() => coloca(idx)}
-                estilo={Styles.botao}
-              />
-            ))}
-          </div>
 
-          <div className={Styles.butts}>
-            <button className={Styles.reset} onClick={reiniciar}>
-              Reiniciar
-            </button >
+      <Trocar
+        estiloM={Styles.modo} 
+        modo={modo} 
+        reset1={Styles.reset1}
+        mensagem={mensagem}
+      />
 
-            <button className={Styles.but} onClick={() => {setModo(null); reiniciar()}}>
-              Voltar ao menu
-            </button>
-          </div>
+      <div className={Styles.tabuleiro}>
+        <h1>{mensagem ? mensagem : `Jogador ${jogadorX ? "X" : "O"}`}</h1>
+        <div className={Styles.grid}>
+          {jogadas.map((jogada, idx) => (
+              <Bot
+              key={idx}
+              value={jogada}
+              onClick={() => coloca(idx)}
+              estilo={Styles.botao}
+            />
+          ))}
         </div>
-        
-        <div className={Styles.menus}>
-          <Placar 
-            xis={placarX} 
-            bol={placarO} 
-            estilo={Styles.placar} 
-            estiloM={Styles.modo} 
-            modo={modo} 
-            zerar={zerar} 
-            reset={Styles.reset}
-            reset1={Styles.reset1}
-            troca={() => setModo(modo === "limitado" ? "normal" : "limitado")}
-            mensagem={mensagem}
-            tb={jogadorX}
-          />
+
+
+        <div className={Styles.butts}>
+          <button className={Styles.reset} onClick={reiniciar}>
+            Reiniciar
+          </button >
+
+          <button className={Styles.but} onClick={() => {setModo(null); reiniciar()}}>
+            Voltar ao menu
+          </button>
         </div>
       </div>
+      
+      <Placar 
+        xis={placarX} 
+        bol={placarO} 
+        estilo={Styles.placar} 
+        zerar={()=> zerar()} 
+        reset={Styles.reset}
+        troca = {()=> setModo(modo == "limitado"? "normal": "limitado")}
+        mensagem={mensagem}
+        tb = {jogadorX}
+        ></Placar>
+
+      
     </div>
   );
 }
