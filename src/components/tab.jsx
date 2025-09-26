@@ -106,19 +106,21 @@ export default function Tabuleiro() {
         </div>
       </div>
       
-      <Placar 
-        xis={placarX} 
-        bol={placarO} 
-        estilo={Styles.placar} 
-        estiloM={Styles.modo} 
-        modo={modo} 
-        zerar={()=> zerar()} 
-        reset={Styles.reset}
-        reset1={Styles.reset1}
-        troca = {()=> setModo(modo == "limitado"? "normal": "limitado")}
-        mensagem={mensagem}
-        tb = {jogadorX}
-        ></Placar>
+      <div className={Styles.menus}>
+        <Placar 
+          xis={placarX} 
+          bol={placarO} 
+          // estilo={Styles.placar} 
+          // estiloM={Styles.modo} 
+          modo={modo} 
+          zerar={zerar} 
+          reset={Styles.reset}
+          reset1={Styles.reset1}
+          troca={() => setModo(modo === "limitado" ? "normal" : "limitado")}
+          mensagem={mensagem}
+          tb={jogadorX}
+        />
+    </div>
     </div>
   );
 }
