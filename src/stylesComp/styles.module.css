@@ -25,6 +25,8 @@
   align-items: center;
   justify-content: center;
   grid-area: tabuleiro;
+  background-color: #467ca0;
+  border-radius: 1rem;
 }
 
 
