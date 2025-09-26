@@ -110,8 +110,8 @@ export default function Tabuleiro() {
         <Placar 
           xis={placarX} 
           bol={placarO} 
-          // estilo={Styles.placar} 
-          // estiloM={Styles.modo} 
+          estilo={Styles.placar} 
+          estiloM={Styles.modo} 
           modo={modo} 
           zerar={zerar} 
           reset={Styles.reset}
