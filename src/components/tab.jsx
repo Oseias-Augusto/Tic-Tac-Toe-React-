@@ -84,13 +84,15 @@ export default function Tabuleiro() {
     <div className={Styles.cont}>
 
       <div className={Styles.layout}>
-        <Trocar
-          estiloM={Styles.modo} 
-          modo={modo} 
-          reset1={Styles.reset1}
-          mensagem={mensagem}
-          troca = {()=> setModo(modo == "limitado"? "normal": "limitado")}
-        />
+
+        <Placar 
+          xis={placarX} 
+          bol={placarO} 
+          estilo={Styles.placar} 
+          zerar={()=> zerar()} 
+          reset={Styles.reset}
+          tb = {jogadorX}
+        ></Placar>
 
         <div className={Styles.tabuleiro}>
           <h1>{mensagem ? mensagem : `Jogador ${jogadorX ? "X" : "O"}`}</h1>
@@ -117,14 +119,13 @@ export default function Tabuleiro() {
           </div>
         </div>
         
-        <Placar 
-          xis={placarX} 
-          bol={placarO} 
-          estilo={Styles.placar} 
-          zerar={()=> zerar()} 
-          reset={Styles.reset}
-          tb = {jogadorX}
-        ></Placar>
+        <Trocar
+          estiloM={Styles.modo} 
+          modo={modo} 
+          reset1={Styles.reset1}
+          mensagem={mensagem}
+          troca = {()=> setModo(modo == "limitado"? "normal": "limitado")}
+        />
 
       </div>
 
